@@ -21,12 +21,11 @@ def get_train_transforms():
     return transforms.Compose([
         transforms.ToPILImage(),
         transforms.RandomApply([
-            transforms.RandomRotation(20, resample=PIL.Image.BICUBIC),
+            transforms.RandomRotation(20),
             transforms.RandomAffine(0, translate=(
-                0.2, 0.2), resample=PIL.Image.BICUBIC),
-            transforms.RandomAffine(0, shear=20, resample=PIL.Image.BICUBIC),
-            transforms.RandomAffine(0, scale=(0.8, 1.2),
-                                    resample=PIL.Image.BICUBIC)
+                0.2, 0.2)),
+            transforms.RandomAffine(0, shear=20),
+            transforms.RandomAffine(0, scale=(0.8, 1.2))
         ]),
         transforms.ToTensor()
     ])

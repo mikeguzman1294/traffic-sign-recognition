@@ -91,6 +91,7 @@ if __name__ == "__main__":
 
     # Data Initialization and Loading
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f'Device used: {device}')
     preprocess(args.data)
     train_loader, valid_loader = get_train_loaders(
         args.data, device, args.batch_size, args.num_workers, args.class_count)
