@@ -110,5 +110,5 @@ data/
 .vscode/
 
 # output
-/*.pt
-/*.png
+#/*.pt
+#/*.png
